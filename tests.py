@@ -12,4 +12,4 @@ def teste_ola_mundo():
 
 def teste_ola_mundo_json():
     response = client.get("/")
-    assert response.json() == {"ola":"mundo"}
+    assert response.json() == {"Hello":"World"}
