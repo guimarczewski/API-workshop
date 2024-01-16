@@ -34,3 +34,11 @@ def ola_mundo(): # response
 @app.get("/produtos") # request
 def listar_produtos(): # response
     return produtos
+
+# endpoint para pegar os produtos
+@app.get("/produtos/{id}") # request
+def buscar_produto(id:int): # response
+    for produto in produtos:
+        if produto["id"] == id:
+            return produto
+    return {"Status":404, "Mensagem":"Produto não encontrado"}
