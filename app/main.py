@@ -22,6 +22,6 @@ def listar_produtos():
 def buscar_produto(id: int): # response
     return lista_de_produtos.buscar_produto(id)
 
-@app.post("/produtos", response_model=list[ProdutosSchema])
+@app.post("/produtos", response_model=ProdutosSchema)
 def adicionar_produto(produto: ProdutosSchema):
-    return produto.adicionar_produto(produto.model_dump())
+    return lista_de_produtos.adicionar_produto(produto.model_dump())
