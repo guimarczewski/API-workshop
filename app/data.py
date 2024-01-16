@@ -34,5 +34,5 @@ class Produtos:
         return {"Status":404, "Mensagem":"Produto não encontrado"}
 
     def adicionar_produto(self, produto):
-        self.produtos.append(produto.dict())
+        self.produtos.append(produto)
         return produto
