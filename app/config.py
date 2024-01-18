@@ -17,7 +17,7 @@ DATABASE_URL = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_na
 engine = create_engine(DATABASE_URL)
 
 # Cria uma sessão para logar
-Session = sessionmaker(bind=engine)
+SessionLocal = sessionmaker(bind=engine)
 
 Base = declarative_base()
 
