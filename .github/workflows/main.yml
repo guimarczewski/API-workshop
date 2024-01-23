@@ -27,6 +27,7 @@ jobs:
           POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
           DB_HOST: ${{ secrets.DB_HOST }}
           DB_PORT: ${{ secrets.DB_PORT }} 
+
       - name: Print Database Port
         run: |
           echo "DB_PORT: $DB_PORT"
