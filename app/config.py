@@ -16,7 +16,7 @@ db_port = os.getenv("DB_PORT")
 print(db_port)
 
 # cria a engine postgresql
-DATABASE_URL = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+DATABASE_URL = f"postgresql://{db_user}:{db_password}@{db_host}:5432/{db_name}"
 engine = create_engine(DATABASE_URL)
 
 # Cria uma sessão para logar
